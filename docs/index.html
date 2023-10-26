@@ -2,11 +2,80 @@
 
 <title>Scratch to JS</title>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/html.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+
+<script type="module">
+  hljs.highlightAll();
+</script>
+
 <style>
+  @import "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css";
   @import "styles.css";
 </style>
 
 <h1>Scratch to JS</h1>
+
+<h2>JavaScript Basics</h2>
+
+<h3>HTML</h3>
+
+<pre>
+  <code class="language-js">
+    &lt;!doctype html&gt;
+    &lt;title&gt;Title of the page&lt;/title&gt;
+
+    &lt;style&gt;
+      /* CSS goes here */
+    &lt;/style&gt;
+
+    &lt;script type="module"&gt;
+      // JavaScript goes here
+    &lt;/script&gt;
+
+    &lt;!-- HTML goes here --&gt;
+  </code>
+</pre>
+
+<h3>Variables</h3>
+
+<pre>
+  <code class="language-js">
+    var a = 'string';
+    var b = 1234;
+    var c = true;
+  </code>
+</pre>
+
+<h3>Functions</h3>
+
+<pre>
+  <code class="language-js">
+    function a() {}
+    var b = function () {};
+    var c = () => {};
+  </code>
+</pre>
+
+<h3>Blocks</h3>
+
+<pre>
+  <code class="language-js">
+    function a() {
+      // code goes here
+    }
+
+    if (a === b) {
+      // code goes here
+    }
+
+    for (var i = 0; i &lt; 3; i++) {
+      // code goes here
+    }
+  </code>
+</pre>
 
 <h2>Events</h2>
 
@@ -15,11 +84,14 @@
 <img src="images/events/when-flag-clicked.png" />
 
 <pre>
-  <code>
+  <code class="language-html">
+    &lt;button id="flag"&gt;Flag&lt;/button&gt;
+  </code>
+  <code class="language-js">
     var flag = document.getElementById('flag');
 
     flag.addEventListener('click', () => {
-
+      // code goes here
     });
   </code>
 </pre>
@@ -29,11 +101,28 @@
 <img src="images/events/when-i-receive-message.png" />
 
 <pre>
-  <code>
+  <code class="language-html">
+    &lt;div id="sprite"&gt;&lt;/div&gt;
+  </code>
+  <code class="language-js">
     var sprite = document.getElementById('sprite');
 
     sprite.addEventListener('message1', () => {
+      // code goes here
+    });
+  </code>
+</pre>
 
+<h3>When key is pressed</h3>
+
+<img src="images/events/when-key-pressed.png" />
+
+<pre>
+  <code class="language-js">
+    window.addEventListener('keypress', (event) => {
+      if (event.key === 'Space') {
+        // code goes here
+      }
     });
   </code>
 </pre>
@@ -45,7 +134,7 @@
 <img src="images/control/wait-seconds.png" />
 
 <pre>
-  <code>
+  <code class="language-js">
   </code>
 </pre>
 
@@ -54,7 +143,7 @@
 <img src="images/control/if-then-else.png" />
 
 <pre>
-  <code>
+  <code class="language-js">
     if (variable) {
 
     } else {
@@ -70,14 +159,14 @@
 <img src="images/variables/make-a-variable.png" />
 
 <pre>
-  <code>
+  <code class="language-js">
     // Create a variable
     var myVariable;
   </code>
 </pre>
 
 <pre>
-  <code>
+  <code class="language-js">
     // Create and set a variable
     var myVariable = 0;
   </code>
@@ -88,7 +177,7 @@
 <img src="images/variables/set-variable-to.png" />
 
 <pre>
-  <code>
+  <code class="language-js">
     myVariable = 0;
   </code>
 </pre>
